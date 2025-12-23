@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@layer components{
+    .dark{
+        @apply bg-gray-700 text-white font-light 
+    }
+    button{
+        @apply border border-2
+    }
+}
+    /* break points for medium screens */
+
+
+@theme {
+  /* This overwrites or adds to your breakpoints */
+  --breakpoint-sm: 300px;
+  --breakpoint-md: 500px;
+  --breakpoint-lg: 1360px; /* Custom breakpoint */
+}
+
