@@ -1,17 +1,31 @@
-let side = document.getElementById("side")
-let content = document.getElementById("content")
+const homes = document.getElementById("homes")
+const abouts = document.getElementById("abouts")
+const projects = document.getElementById("projects")
+const contacts = document.getElementById("contacts")
+homes.addEventListener("click", () => {
+    // ace.style.color("red")
+    homes.style.color= "#94a3b8"
+    abouts.style.color = "black"
+    projects.style.color = "black"
+    contacts.style.color = "black"
 
-side.addEventListener("click", () => {
-    content.classList.toggle("hidden")
 })
-// Add 'opacity-0 translate-y-10' to your HTML elements via Tailwind
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('opacity-100', 'translate-y-0');
-      entry.target.classList.remove('opacity-0', 'translate-y-10');
-    }
-  });
-});
-
-document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+abouts.addEventListener("click", () => {
+    // ace.style.color("red")
+    abouts.style.color= "#94a3b8"
+    homes.style.color = "black"
+    projects.style.color = "black"
+    contacts.style.color = "black"
+})
+projects.addEventListener("click", () => {
+    projects.style.color= "#94a3b8"
+    abouts.style.color = "black"
+    homes.style.color = "black"
+    contacts.style.color = "black"
+})
+contacts.addEventListener("click", () => {
+    contacts.style.color= "#94a3b8"
+    abouts.style.color = "black"
+    projects.style.color = "black"
+    homes.style.color = "black"
+})

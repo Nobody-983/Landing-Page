@@ -10,19 +10,19 @@
     <!-- nav bar -->
     <nav class="sticky top-2 z-50 flex items-center justify-center gap-6 p-3 mx-auto w-[90%] md:w-[50%] bg-gray-300 text-black border rounded-xl shadow-sm">
   
-  <a href="#home" class="text-xl transition-all duration-400 ease-in hover:text-slate-500 hover:translate-y-1">
+  <a id="homes" href="#home" class="text-xl transition-all duration-400 ease-in hover:text-slate-500 hover:translate-y-1">
     Home
   </a>
   
-  <a href="#about" class="text-xl transition-all duration-400 ease-in hover:text-slate-500 hover:translate-y-1">
+  <a id="abouts" href="#about" class="text-xl transition-all duration-400 ease-in hover:text-slate-500 hover:translate-y-1">
     About
   </a>
   
-  <a href="#projects" class="text-xl transition-all duration-400 ease-in hover:text-slate-500 hover:translate-y-1">
+  <a id="projects" href="#projects" class="text-xl transition-all duration-400 ease-in hover:text-slate-500 hover:translate-y-1">
     Projects
   </a>
   
-  <a href="#contact" class="text-xl transition-all duration-400 ease-in hover:text-slate-500 hover:translate-y-1">
+  <a id="contacts" href="#contact" class="text-xl transition-all duration-400 ease-in hover:text-slate-500 hover:translate-y-1">
     Contact
   </a>
 
@@ -52,9 +52,12 @@
             <img src="images/profile.jpeg"alt="" class="ml-[65%] sm:w-[33%] md:w-[25%] lg:w-[25%] mb-4  
             transition-all duration-400 hover:scale-105 hover:opacity-100">
             <div class="">
-
-                <p class="text-xl">I am Ahmed Ibrahim</p>
-                <p class="text-5xl"> Software Engineer</p>
+                <h1 class="text-4xl font-medium flex gap-2">
+  <span class="animate-[var(--animate-fade-up)] [animation-delay:0s]">Ahmed</span>
+  <span class="animate-[var(--animate-fade-up)] [animation-delay:0.5s]">Ibrahim</span>
+</h1>
+                <!-- <p class="text-xl">I am Ahmed Ibrahim</p> -->
+                <p class="text-5xl mb-2"> Software Engineer</p>
                 <p class="md:text-xl mb-4">Building interfaces, solving problems, crafting Experiences</p>
             </div>
             <!-- buttons -->
@@ -83,7 +86,7 @@
 <p class=" sm:w-[90%] sm:mt-10 lg:mt-40 text-left md:mt-16 md:hidden ">I am a passionate Software developer in modern technlogies <br> like HTML,
   CSS, Tailwind, Javascript and much more Javascript scripting language
 </p>
-<p class="sm:hidden md:flex mt-12  md:w-[90%]">
+<p class="mb-4 sm:hidden md:flex mt-12  md:w-[90%]">
             I build scalable web experiences by choosing the right stack. I use HTML, Tailwind, and JS for streamlined, 
             lightweight sites, and React, Next.js,
              and TypeScript for robust, high-performance applications—all with a relentless focus on responsiveness.
@@ -92,29 +95,35 @@
 </div>
 </div>
 
-<div class="relative w-full overflow-hidden py-3">
+<div class="relative w-[90%] mx-auto h-16 flex items-center overflow-hidden 
+            border border-white/10 rounded-lg bg-white/[0.03] backdrop-blur-sm shadow-2xl">
   
-  <div class="flex w-max  animate-across">
-    <img src="images/html.jpeg" alt="html" class="size-8 ml-8">
-    <img src="images/css.jpeg" alt="css" class="size-8 ml-8">
-    <img src="images/react.jpeg" alt="react" class="size-8 ml-8">
-    <img src="images/tailwind.jpeg" alt="tailwind" class="size-8 ml-8">
-    <img src="images/js.jpeg" alt="js" class="size-8 ml-8">
-     <img src="images/html.jpeg" alt="html" class="size-8 sm:hidden lg:flex ml-8">
-    <img src="images/css.jpeg" alt="css" class="size-8 sm:hidden lg:flex ml-8">
-    <img src="images/react.jpeg" alt="react" class="size-8 sm:hidden lg:flex ml-8">
-    <img src="images/tailwind.jpeg" alt="tailwind" class="size-8 sm:hidden lg:flex ml-8">
-    <img src="images/js.jpeg" alt="js" class="size-8 lg:flex sm:hidden ml-8">
-
+  <div class="absolute inset-y-0 left-0 w-24 z-20 pointer-events-none 
+              bg-gradient-to-r from-black via-black/80 to-transparent">
   </div>
-  <div class="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent"></div>
-  <div class="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent"></div>
-</div>
-</div>
-</div>
 
+  <div class="absolute inset-y-0 right-0 w-24 z-20 pointer-events-none 
+              bg-gradient-to-l from-black via-black/80 to-transparent">
+  </div>
+
+  <div class="flex shrink-0 items-center gap-20 px-10 animate-[var(--animate-across)]">
+    
+    <img src="images/html.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+    <img src="images/css.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+    <img src="images/react.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+    <img src="images/tailwind.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+    <img src="images/js.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+
+    <img src="images/html.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+    <img src="images/css.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+    <img src="images/react.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+    <img src="images/tailwind.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+    <img src="images/js.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
     
   </div>
+  <div class="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent"></div>
+<div class="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent"></div>
+</div>
 </div>
          
      </div>

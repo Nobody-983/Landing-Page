@@ -19,16 +19,43 @@
   --breakpoint-md: 500px;
 
   --breakpoint-lg: 1360px;
-   /* Custom breakpoint */
-  @keyframes enter-left-exit-right {
-    0% { transform: translateX(-20%); }
-    100% { transform: translateX(100%); }
+}
+@theme {
+  --animate-across: across 8s linear infinite;
+
+  @keyframes across {
+    from {
+      /* Start completely off-screen to the right */
+      transform: translateX(100vw);
+    }
+    to {
+      /* End completely off-screen to the left */
+      transform: translateX(-100%);
+    }
   }
-
-  /* 10s is a good speed to cross the whole screen */
-  --animate-across: enter-left-exit-right 3s linear infinite;
-
-  
-
 }
 
+
+
+@theme {
+  --animate-fade-up: fade-up 1.5s ease-in-out infinite;
+
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    30% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    70% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+}
