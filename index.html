@@ -31,21 +31,6 @@
  <div>
 
 
-     <!-- side bar -->
-     <!-- <div class="fixed top-0 left-0 h-full w-64 bg-slate-900 text-white transform -translate-x-full transition-transform duration-300" id="sidebar">
-
-         <button class="md:hidden fixed p-1.5" id="side">=</button>
-          <div class="hidden sm:text-sm fixed button border-white bg-slate-400 w-[20%] ml-4 mt-2"  id="content">
-     <a class=" transform hover:text-slate-500 
-         hover:transition ease-in duration-400 hover:translate-y-1 md:text-xl" href="#home">Home</p>
-             <a class=" transform hover:text-slate-500 
-             hover:transition ease-in duration-400 hover:translate-y-1 md:text-xl" href="#about">About</p>
-         <a class=" transform hover:text-blue-500
-          hover:transition ease-in duration-400 hover:translate-y-1 md:text-xl" href="#projects">Projects</P>
-         <a class="transform hover:transition ease-in duration-400 
-         hover:translate-y-1 md:text-xl hover:text-slate-500" href="#contact">Contact</a>
-        </div>
-     </div> -->
         <!-- home -->
         <div id="home" class="transform sm:ml-4 mt-8  lg:ml-16 text-2xl sm:font-light sm:text-sm">
             
@@ -60,40 +45,34 @@
                 <p class="text-5xl mb-2"> Software Engineer</p>
                 <p class="md:text-xl mb-4">Building interfaces, solving problems, crafting Experiences</p>
             </div>
-            <!-- buttons -->
-            <!-- <div class="mx-auto lg:mt-10 md:mt-6  md:ml-32 ">
-                <button class="sm:text-sm sm:ml-12 cursor-pointer hover:bg-slate-500 md:w-[30%]">View my work</button>
-                <button class="sm:text-sm cursor-pointer hover:bg-slate-500 md:w-[25%] mb-16 ">Contact Me</button>
-                
-            </div> -->
         </div>
         
  
-     </div>
  </div>
+ 
 
     <!-- About -->
      <div id="about" class="mt-32">
 <!-- <div class="flex"> -->
 
     
-    <!-- profile -->
-    <h1 class="text-2xl sm:ml-28 md:text-center md:mx-auto ">About Me</h1>
-    <div class="md:mt-4 sm:mt-4 md:ml-0 sm:ml-0 flex">
+    
+    <h1 class="text-4xl sm:ml-28  md:text-center md:mx-auto ">About Me</h1>
+    <div class=" md:ml-0 sm:ml-0 flex">
     <img src="images/profile.jpeg" alt="" class=" md:w-[25%]  sm:w-[40%] sm:ml-0 sm:h-[30%] sm:mr-4 
-    md:ml-8 mb-4 mt-8 transition-all duration-400 hover:scale-105 hover:opacity-100">
+    md:ml-8 mb-4  transition-all duration-400 hover:scale-105 hover:opacity-100">
 
-<p class=" sm:w-[90%] sm:mt-10 lg:mt-40 text-left md:mt-16 md:hidden ">I am a passionate Software developer in modern technlogies <br> like HTML,
+<p class=" sm:w-[90%] lg:mt-40 text-left md:hidden ">I am a passionate Software developer in modern technlogies <br> like HTML,
   CSS, Tailwind, Javascript and much more Javascript scripting language
 </p>
-<p class="mb-4 sm:hidden md:flex mt-12  md:w-[90%]">
+<p class="mb-8 sm:hidden md:flex mt-8  md:w-[90%]">
             I build scalable web experiences by choosing the right stack. I use HTML, Tailwind, and JS for streamlined, 
             lightweight sites, and React, Next.js,
              and TypeScript for robust, high-performance applications—all with a relentless focus on responsiveness.
 
 </p>
 </div>
-</div>
+     </div>
 
 <div class="relative w-[90%] mx-auto h-16 flex items-center overflow-hidden 
             border border-white/10 rounded-lg bg-white/[0.03] backdrop-blur-sm shadow-2xl">
@@ -113,49 +92,65 @@
     <img src="images/react.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
     <img src="images/tailwind.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
     <img src="images/js.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+    <img src="images/typescript.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
 
     <img src="images/html.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
     <img src="images/css.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
     <img src="images/react.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
     <img src="images/tailwind.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
     <img src="images/js.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+    <img src="images/typescript.jpeg" class="size-8 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
     
   </div>
+  
   <div class="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent"></div>
 <div class="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent"></div>
 </div>
-</div>
-         
-     </div>
-
-
-
-
-
-
-
 
 
     <!-- projects -->
-    <div id="projects" class=" mt-8 lg:w-[90%] md:w-[100%]">
-        <h1 class="text-3xl mb-4 md:mt-10">Featured Projects</h1>
-        
-<div class="w-[30%] bg-gray-500 p-[10%]"></div>
+    <div id="projects" class="mt-12 mb-12  gap-12 w-[80%] mx-auto justify-center  lg:grid lg:grid-cols-2">
+   
+        <div class="mx-auto">
 
+            <p class="text-center  text-3xl mb-6">Seeker</p>
+            <img src="images/projects/seeker.png" 
+                 alt="Seeker Project"
+                 class=" w-[70%] mx-auto mb-4"
+                 /> 
+                
+                <p class="border border-amber-200 p-4">
+                  Seeker is a job discovery platform designed to help users find Web3 and online job opportunities such as moderation, raiding, and community management roles. It lists different projects or tokens with details like their description, social handles, and whether they have an official website, making it easier for job seekers to evaluate and connect with opportunities.
+                </p>
+                <div class="flex mx-auto gap-8 mt-4 justify-center">
+                    <a href="https://seeker-omega-henna.vercel.app/" target="_blank">
+
+                        <img src="images/website.jpeg" class="size-12 cursor-pointer" />
+                    </a>
+    <img src="images/github.jpeg" class="size-12 cursor-pointer" />
+
+                </div>
+        </div>
 <div>
-    <h1 class="text-3xl">Projects</h1>
-    <div></div>
-    <div class="border border-red-500 w-[30%] mb-8 md:disp ">
-        <p>
+
+    <h1 class="text-center  mb-4 text-4xl">Swiftly</h1>
+    
+        <img src="images/projects/swiftly.png" 
+        alt="Seeker Project"
+        class="h-[50%] w-[70%] mx-auto mb-4" /> 
+        <p class="border border-amber-200 p-4">
+          Swiftly is a simple, modern tool or service designed to help users complete tasks faster and more efficiently, focusing on speed, ease of use, and clean user experience. It is often used in contexts like workflow automation, communication, or digital tools where quick performance and simplicity matter.
         </p>
-        
-    </div>
+        <div class="flex mx-auto justify-center">
+     <img src="images/website.jpeg" class="size-12 mt-4  cursor-pointer" />
+     <!-- <img src="images/github.jpeg" class="size-12 cursor-pointer" /> -->
+ 
+                 </div>
+    </div>       
 </div>
-</div>
+    
 
 
-
-    </div>
 
      <h1 id="contact" class="text-3xl text-center sm:mx-auto">Contact me</h1>
      <form action="" class="border text-slate-500 md:ml-30 mt-10 mb-4 mx-auto w-[70%] p-4 bg-[#121212]">
