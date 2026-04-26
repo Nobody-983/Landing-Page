@@ -1,6 +1,6 @@
 const homes = document.getElementById("homes")
 const abouts = document.getElementById("abouts")
-const projects = document.getElementById("projects")
+const projects = document.getElementById("project")
 const contacts = document.getElementById("contacts")
 homes.addEventListener("click", () => {
     // ace.style.color("red")
@@ -29,3 +29,19 @@ contacts.addEventListener("click", () => {
     projects.style.color = "black"
     homes.style.color = "black"
 })
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const target = document.querySelector(this.getAttribute("href"));
+
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  });
+});
