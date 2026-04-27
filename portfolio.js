@@ -57,8 +57,8 @@ const message = document.getElementById("message")
 const field = document.getElementById("field")
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
-  if (name.value || email.value === "") {
-    return field.textContent = "input fields"
+  if (name.value === "" || email.value === "") {
+    return field.textContent = "Input Fields"
   }
   
     try {
