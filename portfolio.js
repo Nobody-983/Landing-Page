@@ -45,3 +45,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+function api(){
+    emailjs.init("");
+};
+
+const form = document.getElementById("contact-form");
+const submit = document.getElementById("submit")
+const name = document.getElementById("name")
+const email = document.getElementById("email")
+const message = document.getElementById("message")
+const field = document.getElementById("field")
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+  if (name.value || email.value === "") {
+    return field.textContent = "input fields"
+  }
+  
+    try {
+      const response = await emailjs.sendForm(
+        "service_p4c7sy3",
+        "template_t4l7xon",
+        this
+      );
+field.textContent = "Thanks for contacting me"
+      console.log("SUCCESS:", response.status, response.text);
+      
+      form.reset();
+
+    } catch (error) {
+      console.log("FAILED:", error);
+field.textContent = "Message didnt go through"
+      
+    }
+  });

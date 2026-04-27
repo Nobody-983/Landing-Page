@@ -19,7 +19,9 @@
     <meta property="og:type" content="website">
 
     <link rel="canonical" href="https://ahmed-ibrahaim.xyz">
-
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
     <link href="./output.css" rel="stylesheet">
 </head>
 
@@ -175,17 +177,21 @@ border border-white/10 rounded-lg bg-white/[0.03] backdrop-blur-sm shadow-2xl">
 
 <!-- Contact -->
 <section id="contact">
-    <h2 class="text-3xl text-center sm:mx-auto">Contact me</h2>
+    <h2 class="text-3xl text-center mx-auto">Contact me</h2>
 
-    <form class="border text-slate-500 md:ml-30 mt-10 mb-4 mx-auto w-[70%] p-4 bg-[#121212]">
-        <label class="block">Name</label>
-        <input type="text" class="w-[71%] bg-amber-50">
+    <form id="contact-form" class="border text-slate-500 justify-center  mt-10 mb-4 mx-auto w-[70%] p-4 bg-[#121212]">
+        <p id="field"></p>
+        <label class="block mb-2">Name</label>
+        <input id="name" type="text" name="name"
+         class="w-[71%]  bg-amber-50">
 
-        <label class="mt-4 block">Email</label>
-        <input type="email" class="w-[71%] bg-amber-50">
+        <label class="mt-4 block mb-2">Email</label>
+        <input id="email" type="email" name="email"
+         class="w-[71%] bg-amber-50">
 
-        <label class="mt-4 block">Message</label>
-        <textarea class="w-[71%] h-[30%] bg-amber-50"></textarea>
+        <label class="mt-4 block mb-2">Message</label>
+        <textarea id="message name="message" class="w-[71%] h-[30%] bg-amber-50"></textarea>
+        <input type="submit" class="border w-80 block mt-4 mx-auto" id="submit" value="Contact me">
     </form>
 </section>
 
@@ -199,7 +205,9 @@ border border-white/10 rounded-lg bg-white/[0.03] backdrop-blur-sm shadow-2xl">
   "url": "https://ahmed-ibrahaim.xyz"
 }
 </script>
-
+<script>
+  emailjs.init("SwAFYNudkNlW-i_z4");
+</script>
 <script src="portfolio.js"></script>
 </body>
 </html>
