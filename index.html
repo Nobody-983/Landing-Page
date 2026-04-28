@@ -29,7 +29,7 @@
 <body class="bg-[#080808] sm:font-[16px] sm:text-xl text-amber-50">
 
 <!-- nav bar -->
-<nav class="sticky top-2 z-50 flex items-center justify-center gap-6 p-3 mx-auto w-[90%] md:w-[50%] bg-gray-300 text-black border rounded-xl shadow-sm">
+<nav class="sticky top-2 z-50 flex items-center justify-center gap-6 p-3 mx-auto w-[90%] md:w-[50%] bg-slate-600 text-black border rounded-xl shadow-sm">
   
   <a href="#home" id="homes" class="text-xl transition-all duration-400 ease-in hover:text-slate-500 hover:translate-y-1">Home</a>
   <a href="#about" id="abouts" class="text-xl transition-all duration-400 ease-in hover:text-slate-500 hover:translate-y-1">About</a>
@@ -144,8 +144,9 @@ border border-white/10 rounded-lg bg-white/[0.03] backdrop-blur-sm shadow-2xl">
         <h2 class="text-center text-4xl mb-4">Seeker</h2>
 
         <img src="images/projects/seeker.png" alt="Seeker project screenshot"
-        class="w-[70%] mx-auto mb-4
-                transform transition duration-300 ease-out md:hover:scale-[1.04] md:hover:-translate-y-1 md:hover:opacity-90 active:scale-95 active:opacity-80
+        class="w-[70%] mx-auto mb-4 h-60
+                transform transition duration-300 ease-out 
+                md:hover:scale-[1.04] md:hover:-translate-y-1 md:hover:opacity-90 active:scale-95 active:opacity-80
         ">
 
         <div class="border border-amber-200 p-4">
@@ -168,7 +169,8 @@ border border-white/10 rounded-lg bg-white/[0.03] backdrop-blur-sm shadow-2xl">
             <a href="https://seeker-omega-henna.vercel.app/" target="_blank">
                 <img src="images/website.jpeg" alt="Visit website" 
                 class="size-12 cursor-pointer
-                transform transition duration-300 ease-out md:hover:scale-[1.04] md:hover:-translate-y-1 md:hover:opacity-90 active:scale-95 active:opacity-80
+                transform transition duration-300 ease-out md:hover:scale-[1.04] 
+                md:hover:-translate-y-1 md:hover:opacity-90 active:scale-95 active:opacity-80
                 ">
             </a>
 
@@ -185,7 +187,7 @@ border border-white/10 rounded-lg bg-white/[0.03] backdrop-blur-sm shadow-2xl">
         <h2 class="text-center mb-4 text-4xl">Swiftly</h2>
 
         <img src="images/projects/swiftly.png" alt="Swiftly project screenshot"
-        class="h-[50%] w-[70%] mx-auto mb-4
+        class="h-[35%] w-[70%] mx-auto mb-4
                 transform transition duration-300 ease-out md:hover:scale-[1.04] md:hover:-translate-y-1 md:hover:opacity-90 active:scale-95 active:opacity-80
         ">
 
@@ -241,7 +243,7 @@ border border-white/10 rounded-lg bg-white/[0.03] backdrop-blur-sm shadow-2xl">
 
         <label class="mt-4 block mb-2">Message</label>
         <textarea id="message" name="message" class="w-[71%] h-[30%] bg-amber-50"></textarea>
-        <input type="submit" class="border w-80 block mt-4 mx-auto" id="submit" value="Contact me">
+        <input type="submit" class="border md:w-80  sm:w-40 block mt-4 mx-auto" id="submit" value="Contact me">
     </form>
 </section>
 <!-- FOOTER -->
