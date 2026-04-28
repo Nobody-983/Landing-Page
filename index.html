@@ -11,6 +11,7 @@
     <meta name="keywords" content="Ahmed Ibrahim, Software Engineer, React Developer, Tailwind CSS, Portfolio Nigeria">
     <meta name="author" content="Ahmed Ibrahim">
     <meta name="google-site-verification" content="googlee1a721f3467aa0a2.html" />
+    <meta name="robots" content="index, follow">
     <!-- Open Graph -->
     <meta property="og:title" content="Ahmed Ibrahim | Software Engineer">
     <meta property="og:description" content="Portfolio showcasing projects, tools, and development work by Ahmed Ibrahim.">
@@ -38,7 +39,7 @@
 </nav>
 
 <!-- home -->
-<header id="home" class="transform sm:ml-4 mt-8 lg:ml-16 text-2xl sm:font-light sm:text-sm">
+<header id="home" class="transform sm:ml-4 mt-8 text-2xl sm:font-light sm:text-sm">
     
     <img src="images/profile.jpeg" alt="Ahmed Ibrahim profile picture"
     class="ml-[65%] sm:w-[33%] md:w-[25%] lg:w-[25%] mb-4  
@@ -47,36 +48,59 @@
     ">
 
     <div>
-        <h1 class="text-4xl font-medium flex gap-2">
+        <h1 class="text-5xl font-bold flex gap-2">
             <span class="animate-[var(--animate-fade-up)] [animation-delay:0s]">Ahmed</span>
             <span class="animate-[var(--animate-fade-up)] [animation-delay:0.5s]">Ibrahim</span>
         </h1>
 
-        <p class="text-5xl mb-2">Software Engineer</p>
-        <p class="md:text-xl mb-4">Building interfaces, solving problems, crafting Experiences</p>
-    </div>
+       <p class="text-2xl mt-4 mb-4">
+    Building modern web applications using React, Tailwind CSS, and JavaScript.
+  </p>
+
+  <p class="text-gray-400 text-xl">
+    Focused on performance, scalability, and clean user experience.
+  </p>
+</div>
 </header>
 
 <!-- About -->
 <section id="about" class="mt-32">
     <h2 class="text-4xl sm:ml-28 md:text-center md:mx-auto">About Me</h2>
 
-    <div class="md:ml-0 sm:ml-0 flex">
+    <div class="flex">
         <img src="images/profile.jpeg" alt="Ahmed Ibrahim working"
-        class="md:w-[25%] sm:w-[40%] sm:ml-0 sm:h-[30%] sm:mr-4 
-        md:ml-8 mb-4 transition-all duration-400 hover:scale-105 hover:opacity-100
-                transform transition duration-300 ease-out md:hover:scale-[1.04] md:hover:-translate-y-1 md:hover:opacity-90 active:scale-95 active:opacity-80
+        class="md:w-[30%] sm:w-[40%]  sm:h-[30%] 
+         mb-4 transition-all duration-400 hover:scale-105 hover:opacity-100
+                transform transition duration-300 ease-out md:hover:scale-[1.04] md:hover:-translate-y-1 
+                md:hover:opacity-90 active:scale-95 active:opacity-80
         ">
+        <section id="about" class="mt-4 mb-6 max-w-5xl mx-auto px-4">
 
-        <p class="sm:w-[90%] lg:mt-40 text-left md:hidden">
-            I am a passionate Software developer in modern technologies like HTML,
-            CSS, Tailwind, Javascript and much more Javascript scripting language
-        </p>
+  
 
-        <p class="mb-8 sm:hidden md:flex mt-8 md:w-[90%]">
-            I build scalable web experiences by choosing the right stack. I use HTML, Tailwind, and JS for streamlined, 
-            lightweight sites, and React, Next.js, and TypeScript for robust, high-performance applications—all with a relentless focus on responsiveness.
-        </p>
+  <!-- MOBILE VERSION -->
+  <p class="mb-4 md:hidden">
+    I'm Ahmed Ibrahim, a frontend developer focused on building fast, responsive web applications using React, Tailwind CSS, and JavaScript.
+  </p>
+
+  <!-- DESKTOP VERSION -->
+  <div class="hidden md:block ">
+    <p class="mb-4">
+      I'm Ahmed Ibrahim, a frontend developer based in Nigeria, passionate about building modern, responsive web applications. 
+      I specialize in React, Tailwind CSS, and JavaScript, focusing on creating user-friendly and scalable interfaces.
+    </p>
+
+    <p class="mb-4">
+      I approach development by choosing the right tools for the job — using lightweight technologies for speed and performance, 
+      and modern frameworks for complex applications.
+    </p>
+
+    <p class="hidden lg:block">
+      My goal is to solve real-world problems through code while continuously improving my skills and building impactful projects.
+    </p>
+  </div>
+
+</section>
     </div>
 </section>
 
@@ -117,16 +141,28 @@ border border-white/10 rounded-lg bg-white/[0.03] backdrop-blur-sm shadow-2xl">
 <section id="projects" class="mt-12 mb-12 gap-12 w-[80%] mx-auto justify-center lg:grid lg:grid-cols-2">
 
     <div class="mx-auto mb-8">
-        <h2 class="text-center text-3xl mb-6">Seeker</h2>
+        <h2 class="text-center text-4xl mb-4">Seeker</h2>
 
         <img src="images/projects/seeker.png" alt="Seeker project screenshot"
         class="w-[70%] mx-auto mb-4
                 transform transition duration-300 ease-out md:hover:scale-[1.04] md:hover:-translate-y-1 md:hover:opacity-90 active:scale-95 active:opacity-80
         ">
 
-        <p class="border border-amber-200 p-4">
-            Seeker is a job discovery platform designed to help users find Web3 and online job opportunities.
-        </p>
+        <div class="border border-amber-200 p-4">
+            <p class="mb-4">
+      Seeker is a job discovery platform designed to help users find Web3 and online opportunities in one place.
+    </p>
+
+    <p class="mb-4">
+      Built with a focus on usability and performance, it simplifies how users explore and access job listings.
+    </p>
+
+    <ul class="list-disc ml-6 mb-4">
+      <li>React + Tailwind CSS</li>
+      <li>Responsive design</li>
+      <li>Clean UI/UX</li>
+    </ul>
+        </div>
 
         <div class="flex mx-auto gap-8 mt-4 justify-center">
             <a href="https://seeker-omega-henna.vercel.app/" target="_blank">
@@ -153,9 +189,21 @@ border border-white/10 rounded-lg bg-white/[0.03] backdrop-blur-sm shadow-2xl">
                 transform transition duration-300 ease-out md:hover:scale-[1.04] md:hover:-translate-y-1 md:hover:opacity-90 active:scale-95 active:opacity-80
         ">
 
-        <p class="border border-amber-200 p-4">
-            Swiftly is a modern tool designed to help users complete tasks faster with a clean experience.
-        </p>
+        <div class="border border-amber-200 p-4">
+           <p class="mb-4">
+      Swiftly helps users complete tasks faster through a clean and intuitive interface.
+    </p>
+
+    <p class="mb-4">
+      The focus was simplicity, speed, and an improved user experience.
+    </p>
+
+    <ul class="list-disc ml-6 mb-4">
+      <li>Modern UI design</li>
+      <li>Fast performance</li>
+      <li>User-focused experience</li>
+    </ul>
+        </div>
 
         <div class="flex mx-auto gap-8 justify-center">
             <a href="https://www.swiftlyweb.shop/" target="_blank">
@@ -177,7 +225,9 @@ border border-white/10 rounded-lg bg-white/[0.03] backdrop-blur-sm shadow-2xl">
 
 <!-- Contact -->
 <section id="contact">
-    <h2 class="text-3xl text-center mx-auto">Contact me</h2>
+
+    <h2 class="text-3xl text-center">Contact Me</h2>
+    <p class="text-xl text-center mx-auto"> Want to work together or have a project idea? Let’s connect.</p>
 
     <form id="contact-form" class="border text-slate-500 justify-center  mt-10 mb-4 mx-auto w-[70%] p-4 bg-[#121212]">
         <p id="field"></p>
@@ -194,7 +244,10 @@ border border-white/10 rounded-lg bg-white/[0.03] backdrop-blur-sm shadow-2xl">
         <input type="submit" class="border w-80 block mt-4 mx-auto" id="submit" value="Contact me">
     </form>
 </section>
-
+<!-- FOOTER -->
+<footer class="mt-20 text-center text-gray-500 pb-6">
+  © 2026 Ahmed Ibrahim. All rights reserved.
+</footer>
 <!-- Structured Data -->
 <script type="application/ld+json">
 {
@@ -208,6 +261,7 @@ border border-white/10 rounded-lg bg-white/[0.03] backdrop-blur-sm shadow-2xl">
 <script>
   emailjs.init("SwAFYNudkNlW-i_z4");
 </script>
+
 <script src="portfolio.js"></script>
 </body>
 </html>
