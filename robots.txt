@@ -1,5 +1,5 @@
-Sitemap: https://ahmed-ibrahaim.xyz/sitemap.xml
 User-agent: *
 Allow: /
+Sitemap: https://ahmed-ibrahaim.xyz/sitemap.xml
 
 Sitemap: https://www.ahmed-ibrahaim.xyz/sitemap.xml
