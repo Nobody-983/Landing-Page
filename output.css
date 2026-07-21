@@ -1,14 +1,14 @@
-/*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+      "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-amber-50: oklch(98.7% 0.022 95.277);
-    --color-amber-100: oklch(96.2% 0.059 95.617);
     --color-amber-200: oklch(92.4% 0.12 95.746);
     --color-cyan-600: oklch(60.9% 0.126 221.723);
     --color-blue-400: oklch(70.7% 0.165 254.624);
@@ -16,14 +16,15 @@
     --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-slate-500: oklch(55.4% 0.046 257.417);
     --color-slate-600: oklch(44.6% 0.043 257.281);
+    --color-slate-800: oklch(27.9% 0.041 260.031);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-700: oklch(37.3% 0.034 259.733);
-    --color-neutral-200: oklch(92.2% 0 0);
-    --color-neutral-400: oklch(70.8% 0 0);
-    --color-neutral-700: oklch(37.1% 0 0);
-    --color-neutral-800: oklch(26.9% 0 0);
-    --color-neutral-900: oklch(20.5% 0 0);
+    --color-neutral-200: oklch(92.2% 0 none);
+    --color-neutral-400: oklch(70.8% 0 none);
+    --color-neutral-700: oklch(37.1% 0 none);
+    --color-neutral-800: oklch(26.9% 0 none);
+    --color-neutral-900: oklch(20.5% 0 none);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -69,7 +70,7 @@
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
     tab-size: 4;
-    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+    font-family: var(--default-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
     font-feature-settings: var(--default-font-feature-settings, normal);
     font-variation-settings: var(--default-font-variation-settings, normal);
     -webkit-tap-highlight-color: transparent;
@@ -121,7 +122,7 @@
     border-color: inherit;
     border-collapse: collapse;
   }
-  :-moz-focusring {
+  :-moz-focusring:where(:not(iframe)) {
     outline: auto;
   }
   progress {
@@ -223,19 +224,19 @@
     position: sticky;
   }
   .inset-0 {
-    inset: calc(var(--spacing) * 0);
+    inset: 0px;
   }
   .inset-y-0 {
-    inset-block: calc(var(--spacing) * 0);
+    inset-block: 0px;
   }
   .top-2 {
     top: calc(var(--spacing) * 2);
   }
   .right-0 {
-    right: calc(var(--spacing) * 0);
+    right: 0px;
   }
   .left-0 {
-    left: calc(var(--spacing) * 0);
+    left: 0px;
   }
   .-z-10 {
     z-index: calc(10 * -1);
@@ -307,10 +308,6 @@
     width: calc(var(--spacing) * 8);
     height: calc(var(--spacing) * 8);
   }
-  .size-12 {
-    width: calc(var(--spacing) * 12);
-    height: calc(var(--spacing) * 12);
-  }
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
@@ -374,9 +371,6 @@
   .animate-spin {
     animation: var(--animate-spin);
   }
-  .cursor-pointer {
-    cursor: pointer;
-  }
   .resize {
     resize: both;
   }
@@ -385,6 +379,9 @@
   }
   .flex-col {
     flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
   }
   .items-center {
     align-items: center;
@@ -400,9 +397,6 @@
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
-  }
-  .gap-8 {
-    gap: calc(var(--spacing) * 8);
   }
   .gap-12 {
     gap: calc(var(--spacing) * 12);
@@ -447,17 +441,23 @@
   .bg-amber-50 {
     background-color: var(--color-amber-50);
   }
+  .bg-black {
+    background-color: var(--color-black);
+  }
   .bg-neutral-900 {
     background-color: var(--color-neutral-900);
   }
   .bg-neutral-900\/50 {
-    background-color: color-mix(in srgb, oklch(20.5% 0 0) 50%, transparent);
+    background-color: color-mix(in srgb, oklch(20.5% 0 none) 50%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-neutral-900) 50%, transparent);
     }
   }
   .bg-slate-600 {
     background-color: var(--color-slate-600);
+  }
+  .bg-slate-800 {
+    background-color: var(--color-slate-800);
   }
   .bg-transparent {
     background-color: transparent;
@@ -699,294 +699,179 @@
   .\[animation-delay\:0s\] {
     animation-delay: 0s;
   }
-  .group-hover\:translate-x-0\.5 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        --tw-translate-x: calc(var(--spacing) * 0.5);
-        translate: var(--tw-translate-x) var(--tw-translate-y);
-      }
+  @media (hover: hover) {
+    .group-hover\:translate-x-0\.5:is(:where(.group):hover *) {
+      --tw-translate-x: calc(var(--spacing) * 0.5);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
     }
-  }
-  .group-hover\:-translate-y-0\.5 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        --tw-translate-y: calc(var(--spacing) * -0.5);
-        translate: var(--tw-translate-x) var(--tw-translate-y);
-      }
+    .group-hover\:-translate-y-0\.5:is(:where(.group):hover *) {
+      --tw-translate-y: calc(var(--spacing) * -0.5);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
     }
-  }
-  .group-hover\:text-blue-400 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        color: var(--color-blue-400);
-      }
+    .group-hover\:text-blue-400:is(:where(.group):hover *) {
+      color: var(--color-blue-400);
     }
-  }
-  .group-hover\:text-neutral-200 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        color: var(--color-neutral-200);
-      }
+    .group-hover\:text-neutral-200:is(:where(.group):hover *) {
+      color: var(--color-neutral-200);
     }
-  }
-  .group-hover\:opacity-100 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        opacity: 100%;
-      }
+    .group-hover\:opacity-100:is(:where(.group):hover *) {
+      opacity: 100%;
     }
-  }
-  .hover\:translate-y-1 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-translate-y: calc(var(--spacing) * 1);
-        translate: var(--tw-translate-x) var(--tw-translate-y);
-      }
+    .hover\:translate-y-1:hover {
+      --tw-translate-y: var(--spacing);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
     }
-  }
-  .hover\:scale-105 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-scale-x: 105%;
-        --tw-scale-y: 105%;
-        --tw-scale-z: 105%;
-        scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
-    }
-  }
-  .hover\:border-blue-500\/50 {
-    &:hover {
-      @media (hover: hover) {
-        border-color: color-mix(in srgb, oklch(62.3% 0.214 259.815) 50%, transparent);
-        @supports (color: color-mix(in lab, red, red)) {
-          border-color: color-mix(in oklab, var(--color-blue-500) 50%, transparent);
-        }
-      }
-    }
-  }
-  .hover\:border-neutral-700 {
-    &:hover {
-      @media (hover: hover) {
-        border-color: var(--color-neutral-700);
-      }
-    }
-  }
-  .hover\:bg-neutral-800\/40 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: color-mix(in srgb, oklch(26.9% 0 0) 40%, transparent);
-        @supports (color: color-mix(in lab, red, red)) {
-          background-color: color-mix(in oklab, var(--color-neutral-800) 40%, transparent);
-        }
-      }
-    }
-  }
-  .hover\:bg-neutral-900 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-neutral-900);
-      }
-    }
-  }
-  .hover\:text-neutral-200 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-neutral-200);
-      }
-    }
-  }
-  .hover\:text-white {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-white);
-      }
-    }
-  }
-  .hover\:opacity-100 {
-    &:hover {
-      @media (hover: hover) {
-        opacity: 100%;
-      }
-    }
-  }
-  .hover\:shadow-\[0_0_20px_rgba\(59\,130\,246\,0\.15\)\] {
-    &:hover {
-      @media (hover: hover) {
-        --tw-shadow: 0 0 20px var(--tw-shadow-color, rgba(59,130,246,0.15));
-        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-      }
-    }
-  }
-  .active\:scale-95 {
-    &:active {
-      --tw-scale-x: 95%;
-      --tw-scale-y: 95%;
-      --tw-scale-z: 95%;
+    .hover\:scale-105:hover {
+      --tw-scale-x: 105%;
+      --tw-scale-y: 105%;
+      --tw-scale-z: 105%;
       scale: var(--tw-scale-x) var(--tw-scale-y);
     }
-  }
-  .active\:scale-98 {
-    &:active {
-      --tw-scale-x: 98%;
-      --tw-scale-y: 98%;
-      --tw-scale-z: 98%;
-      scale: var(--tw-scale-x) var(--tw-scale-y);
+    .hover\:border-blue-500\/50:hover {
+      border-color: color-mix(in srgb, oklch(62.3% 0.214 259.815) 50%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:border-blue-500\/50:hover {
+        border-color: color-mix(in oklab, var(--color-blue-500) 50%, transparent);
+      }
+    }
+    .hover\:border-neutral-700:hover {
+      border-color: var(--color-neutral-700);
+    }
+    .hover\:bg-neutral-800\/40:hover {
+      background-color: color-mix(in srgb, oklch(26.9% 0 none) 40%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-neutral-800\/40:hover {
+        background-color: color-mix(in oklab, var(--color-neutral-800) 40%, transparent);
+      }
+    }
+    .hover\:bg-neutral-900:hover {
+      background-color: var(--color-neutral-900);
+    }
+    .hover\:text-neutral-200:hover {
+      color: var(--color-neutral-200);
+    }
+    .hover\:text-white:hover {
+      color: var(--color-white);
+    }
+    .hover\:opacity-100:hover {
+      opacity: 100%;
+    }
+    .hover\:shadow-\[0_0_20px_rgba\(59\,130\,246\,0\.15\)\]:hover {
+      --tw-shadow: 0 0 20px var(--tw-shadow-color, rgba(59,130,246,0.15));
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
-  .active\:opacity-80 {
-    &:active {
-      opacity: 80%;
-    }
+  .active\:scale-95:active {
+    --tw-scale-x: 95%;
+    --tw-scale-y: 95%;
+    --tw-scale-z: 95%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
   }
-  .sm\:ml-4 {
-    @media (width >= 300px) {
+  .active\:scale-98:active {
+    --tw-scale-x: 98%;
+    --tw-scale-y: 98%;
+    --tw-scale-z: 98%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .active\:opacity-80:active {
+    opacity: 80%;
+  }
+  @media (width >= 300px) {
+    .sm\:ml-4 {
       margin-left: calc(var(--spacing) * 4);
     }
-  }
-  .sm\:ml-28 {
-    @media (width >= 300px) {
+    .sm\:ml-28 {
       margin-left: calc(var(--spacing) * 28);
     }
-  }
-  .sm\:h-\[30\%\] {
-    @media (width >= 300px) {
+    .sm\:h-\[30\%\] {
       height: 30%;
     }
-  }
-  .sm\:w-40 {
-    @media (width >= 300px) {
+    .sm\:w-40 {
       width: calc(var(--spacing) * 40);
     }
-  }
-  .sm\:w-\[33\%\] {
-    @media (width >= 300px) {
+    .sm\:w-\[33\%\] {
       width: 33%;
     }
-  }
-  .sm\:w-\[40\%\] {
-    @media (width >= 300px) {
+    .sm\:w-\[40\%\] {
       width: 40%;
     }
-  }
-  .sm\:w-auto {
-    @media (width >= 300px) {
+    .sm\:w-auto {
       width: auto;
     }
-  }
-  .sm\:flex-row {
-    @media (width >= 300px) {
+    .sm\:flex-row {
       flex-direction: row;
     }
-  }
-  .sm\:text-sm {
-    @media (width >= 300px) {
+    .sm\:text-sm {
       font-size: var(--text-sm);
       line-height: var(--tw-leading, var(--text-sm--line-height));
     }
-  }
-  .sm\:text-xl {
-    @media (width >= 300px) {
+    .sm\:text-xl {
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
-  }
-  .sm\:font-\[16px\] {
-    @media (width >= 300px) {
+    .sm\:font-\[16px\] {
       --tw-font-weight: 16px;
       font-weight: 16px;
     }
-  }
-  .sm\:font-light {
-    @media (width >= 300px) {
+    .sm\:font-light {
       --tw-font-weight: var(--font-weight-light);
       font-weight: var(--font-weight-light);
     }
   }
-  .md\:mx-auto {
-    @media (width >= 500px) {
+  @media (width >= 500px) {
+    .md\:mx-auto {
       margin-inline: auto;
     }
-  }
-  .md\:block {
-    @media (width >= 500px) {
+    .md\:block {
       display: block;
     }
-  }
-  .md\:hidden {
-    @media (width >= 500px) {
+    .md\:hidden {
       display: none;
     }
-  }
-  .md\:w-80 {
-    @media (width >= 500px) {
+    .md\:w-80 {
       width: calc(var(--spacing) * 80);
     }
-  }
-  .md\:w-\[25\%\] {
-    @media (width >= 500px) {
+    .md\:w-\[25\%\] {
       width: 25%;
     }
-  }
-  .md\:w-\[30\%\] {
-    @media (width >= 500px) {
+    .md\:w-\[30\%\] {
       width: 30%;
     }
-  }
-  .md\:w-\[50\%\] {
-    @media (width >= 500px) {
+    .md\:w-\[50\%\] {
       width: 50%;
     }
-  }
-  .md\:text-center {
-    @media (width >= 500px) {
+    .md\:text-center {
       text-align: center;
     }
-  }
-  .md\:hover\:-translate-y-1 {
-    @media (width >= 500px) {
-      &:hover {
-        @media (hover: hover) {
-          --tw-translate-y: calc(var(--spacing) * -1);
-          translate: var(--tw-translate-x) var(--tw-translate-y);
-        }
+    @media (hover: hover) {
+      .md\:hover\:-translate-y-1:hover {
+        --tw-translate-y: calc(var(--spacing) * -1);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+      .md\:hover\:scale-\[1\.04\]:hover {
+        scale: 1.04;
+      }
+      .md\:hover\:opacity-90:hover {
+        opacity: 90%;
       }
     }
   }
-  .md\:hover\:scale-\[1\.04\] {
-    @media (width >= 500px) {
-      &:hover {
-        @media (hover: hover) {
-          scale: 1.04;
-        }
-      }
-    }
-  }
-  .md\:hover\:opacity-90 {
-    @media (width >= 500px) {
-      &:hover {
-        @media (hover: hover) {
-          opacity: 90%;
-        }
-      }
-    }
-  }
-  .lg\:block {
-    @media (width >= 1360px) {
+  @media (width >= 1360px) {
+    .lg\:block {
       display: block;
     }
-  }
-  .lg\:grid {
-    @media (width >= 1360px) {
+    .lg\:flex {
+      display: flex;
+    }
+    .lg\:grid {
       display: grid;
     }
-  }
-  .lg\:w-\[25\%\] {
-    @media (width >= 1360px) {
+    .lg\:w-\[25\%\] {
       width: 25%;
     }
-  }
-  .lg\:grid-cols-2 {
-    @media (width >= 1360px) {
+    .lg\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
