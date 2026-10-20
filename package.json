@@ -8,6 +8,6 @@
     "tailwindcss": "^4.3.3"
   },
   "scripts": {
-    "dev": "tailwindcss -i ./input.css -o ./output.css --watch"
+    "dev": "node init && tailwindcss -i ./input.css -o ./output.css --watch"
   }
 }
